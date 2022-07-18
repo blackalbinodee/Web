@@ -1,228 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:wght@200;300;500;600;700&display=swap');
+:root
+{
+    --bg-black-900: #f2f2fc;
+    --bg-black-100: #fdf9ff;
+    --bg-black-50: #e8dfec;
+    --text-black-900: #302e4d;
+    --text-black-700: #504e70;
+}
+
+body {
+    line-height: 1.5;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
 *{
     margin: 0;
     padding: 0;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
 }
 
+::before, ::after {
+    box-sizing: border-box;
 
-.main{
-    width: 100%;
-    height: 100%;
-    background-image: url(1.JPG);
-    background: linear-gradient(to top, rbga(0,0,0,0.5)50%, rbga(0,0,0,0.5)50%), url(1.JPG) no-repeat;
-    overflow: hidden;
-    background-position: center;
-    background-size: cover;
-    min-height: 100vh;
-}
-
-.navbar{
-    width: 1500px;
-    height: 50px;
-    margin: auto;
-    background: rgb(248, 214, 248);
-}
-
-.icon{
-    width: 200px;
-    float: left;
-    height: 70px;
-}
-
-.logo{
-    color: navy;
-    font-size: 18px;
-    font-family: cursive;
-    padding-left: 20px;
-    float:left;
-    padding-top: 10px;
-}
-
-.menu{
-    width: 400px;
-    float: left;
-    height: 70px;
 }
 
 ul{
-    float: left;
+    list-style: none;
+}
+
+.home-section 
+{
+    background: var(--bg-black-900);
+    min-height: 100vh;
+    display: block;
+    position: fixed;
+    left: 270px;
+    top: 0;
+    right: 0;
+    z-index: 0;
+    opacity: 1;
+}
+.aside{
+    width: 270px;
+    background: var(--bg-black-100);
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 30px;
+    height: 100%;
+    border-right: 1px solid var(--bg-black-50);
+    z-index: 10;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-ul li{
-    list-style: none;
-    margin-left: 62px;
-    margin-top: 15px;
-    font-size: 14px;
+.aside .logo{
+    position: absolute;
+    top: 50px;
+    font-size: 30px;
+    text-transform: capitalize;
 }
 
-ul li a{
-    text-decoration: none;
-    color: rgb(0, 0, 128);
-    font-family: arial;
-    font-weight: bold;
-    transition: 0.4s ease-in-out;
-
-}
-
-ul li a:hover{
-    color: slateblue;
-}
-
-.search{
-    width: 270px;
-    float: left;
-    margin-left: 380px;
-
-}
-
-.srch{
-    font-family: 'Times New Roman';
-    width: 150px;
-    height: 30px;
-    background: transparent;
-    border: 2px solid navy;
-    margin-top: 10px;
-    color: white;
-    border-right: none;
-    font-size: 16px;
-    float: left;
-    padding: 10px;
-    border-bottom-left-radius: 5px;
-    border-top-left-radius: 5px;
-}
-
-.btn{
-    width: 100px;
-    height: 30px;
-    background: navy;
-    border: 2px solid navy;
-    margin-top: 10px;
-    color:whitesmoke;
-    font-size: 15px;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-}
-
-.btn:focus{
-    outline: none;
-}
-
-.srch:focus{
-    outline: none;
-}
-
-.content{
-    width: 1200px;
-    height: auto;
-    margin: auto;
-    color: navy;
+.aside .logo a {
+    color: var(--text-black-900);
+    font-weight: 700;
+    padding: 15px 20px;
+    font-size: 25px;
+    letter-spacing: 1px; 
     position: relative;
 }
 
-.content .par{
-    font-size: 12px;
-    padding-left: 27px;
-    padding-bottom: 25px;
-    font-family: Arial;
-    letter-spacing: 1.2px;
-    line-height: 30px;   
+.aside .logo a span {
+    font-family: 'Clicker Script', cursive;
+    font-family: 40px;
 }
 
-.content h5{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 12px;
-    padding-left: 27px;
-    margin-top: 9%;
-    letter-spacing: 2px;
+.aside .logo a::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-bottom: 5px solid var(--skin-color);
+    border-left: 5px solid var(--skin-color);
+    bottom: 0;
+    left: 0;
 }
 
-
-.content h1{
-    font-family: Arial;
-    font-size: 50px;
-    padding-left: 20px;
-
-    letter-spacing: 2px;
+.aside .logo a::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-top: 5px solid var(--skin-color);
+    border-right: 5px solid var(--skin-color);
+    top: 0;
+    right: 0;
 }
 
-.content .cn{
-    width: 70px;
+.aside .nav-toggler {
     height: 40px;
-    background: rgb(252, 108, 42);
-    border: none;
-    margin-bottom: 10px;
-    margin-left: 20px;
-    font-size: 12px;
-    border-radius:10px;
+    width: 45px;
+    border: 1px solid var(--bg-black-50);
     cursor: pointer;
-    transition: .4s ease;
+    position: fixed;
+    left: 300px;
+    top: 20px;
+    border-radius: 5px;
+    background: var(--bg-black-100);
+}
+.aside .nav{
+    margin-top: 50px;
 }
 
-.content .cn .a{
-    text-decoration: none;
-    color: white;
-    transition: .3s ease;
+.aside .nav li {
+    margin-bottom: 20px;
+    display: block;
+    border-right: 1px solid var(--bg-black-50);
+    border-bottom: 1px solid var(--bg-black-50);
+
 }
 
-.cn:hover{
-    background-color: violet;
+.aside .nav li a {
+    font-size: 16px;
+    font-weight: 600;
+    display: block;
+    color: var(--text-black-900);
+    padding: 5px 15px;
+    border-bottom: 1px solid vaar(--bg-black-50);
 }
 
-@media screen and (max-width:1200px) {
+.aside .nav li a.active {
+    color: var(--skin-color);
+} 
 
-    .navbar{
-        width: 100%;
-        height: 100px;
-    }
-    ul{
-        margin-left: 30px;
-    }
-    ul li{
-        margin-left: 60px;
-    }
-    ul li a{
-        font-size: 1.6vw;
-    }
-    
-    .search{
-        margin-top: 3px;
-        margin-left: 290px;
-    }
-
-    .srch{
-        height: 40px;
-        width: 190px;
-        font-size: 14px;
-    }
-
-    .btn{
-        height: 40px;
-        width: 80px;
-    }
-
-    .content{
-        width: 100%;
-    }
-
-    .content h1, .content span{
-        font-size: 4.5vw;
-    }
-    
-    .content .par{
-        width: 90%;
-        font-size: 1.5vw;
-    }
-
-    .content .cn{
-        width: 13%;
-        height: 3.5vw;
-        font-size: 1.8vw;
-    }
-
-    .content a{
-        font-size: 1.6vw;
-         
-    }
+.aside .nav li a i {
+    margin-right: 15px;
 }
