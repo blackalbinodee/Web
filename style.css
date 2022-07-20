@@ -38,10 +38,49 @@ ul{
     display: block;
     position: fixed;
     left: 270px;
+    padding: 0 30px;
     top: 0;
     right: 0;
     z-index: 0;
     opacity: 1;
+}
+
+.padd-15 {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.container {
+    max-width: 1100px;
+    width: 100%;
+    margin: auto;
+
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 100px;
+    margin-left: -15px;
+    margin-right: -15px;
+    position: relative;
+}
+
+.btn {
+    font-size: 16px;
+    font-weight: 500;
+    padding: 12px 35px;
+    color: white;
+    background: crimson;
+    border-radius: 40px;
+    border: none;
+    display: inline-block;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.btn:hover{
+    transform: scale(1.05s);
+    background: yellowgreen;
 }
 .aside{
     width: 270px;
@@ -111,9 +150,41 @@ ul{
     top: 20px;
     border-radius: 5px;
     background: var(--bg-black-100);
+    display: none;
+    align-items: center;
+    justify-content: center;
 }
 .aside .nav{
     margin-top: 50px;
+}
+
+.aside .nav-toggler span {
+    height: 2px;
+    width: 18px;
+    background: var(--skin-color);
+    display: inline-block;
+    position: relative;
+
+}
+
+.aside .nav-toggler span::before {
+    content: '';
+    height: 2px;
+    width: 18px;
+    background: var(--skin-color);
+    position: absolute;
+    top: -6px;
+    left: 0;
+}
+
+.aside .nav-toggler span::after {
+    content: '';
+    height: 2px;
+    width: 18px;
+    background: var(--skin-color);
+    position: absolute;
+    top: 6px;
+    left: 0;
 }
 
 .aside .nav li {
@@ -139,4 +210,82 @@ ul{
 
 .aside .nav li a i {
     margin-right: 15px;
+}
+.home {
+    min-height: 100vh;
+    display: flex;
+    color: var(--text-black-900);
+}
+.home-info {
+    flex: 0 0 60%;
+    max-width: 60%;
+}
+
+h3.hello {
+    font-size: 20px;
+    margin: 15px 0;
+    font-weight: 500;
+}
+
+h3.hello span {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: crimson;
+}
+
+h3.my-profession {
+    font-size: 20px;
+    margin: 15px 0;
+    font-weight: 500;
+}
+
+h3.my-profession span {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 30px;
+}
+
+
+.typing {
+    color: crimson;
+}
+
+.home-info p {
+    margin-bottom: 70px;
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--text-black-900);
+}
+.home-img {
+    flex: 0 0 40%;
+    max-width: 40%;
+    text-align: center;
+    position: relative;
+}
+
+.home-img::before {
+    content: '';
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    left: 20px;
+    border-top: 10px solid crimson;
+    border-left: 10px solid crimson;
+    top: -40px;
+}
+
+.home-img::after {
+    content: '';
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    right: 20px;
+    border-bottom: 10px solid crimson;
+    border-right: 10px solid crimson;
+    bottom: -40px;
+}
+.home-img img {
+    height: 370px;
+    margin: auto;
+    border-radius: 5px;
 }
