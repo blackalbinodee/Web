@@ -31,31 +31,70 @@ ul{
     list-style: none;
 }
 
-.home-section 
+.section 
 {
     background: var(--bg-black-900);
     min-height: 100vh;
     display: block;
-    position: fixed;
-    left: 270px;
     padding: 0 30px;
-    top: 0;
-    right: 0;
-    z-index: 0;
     opacity: 1;
+}
+.hidden {
+    display: none !important;
+}
+.main-content {
+    padding-left: 270px;
 }
 
 .padd-15 {
     padding-left: 15px;
     padding-right: 15px;
 }
+
 .container {
     max-width: 1100px;
     width: 100%;
     margin: auto;
-
 }
 
+.section .container {
+    padding-top: 60px;
+    padding-bottom: 70px;
+}
+
+.section-title {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: -100px;
+}
+
+.section-title h2 {
+    font-size: 30px;
+    color: var(--text-black-900);
+    font-weight: 700;
+    position: relative;
+}
+
+.section-title h2::before {
+    content: '';
+    height: 4px;
+    width: 50px;
+    background: crimson;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+.section-title h2::after {
+    content: '';
+    height: 4px;
+    width: 25px;
+    background: crimson;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 8px;
+}
 .row {
     display: flex;
     flex-wrap: wrap;
@@ -288,4 +327,90 @@ h3.my-profession span {
     height: 370px;
     margin: auto;
     border-radius: 5px;
+}
+
+.about .about-content {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.about .about-content .about-text {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-top: -90px;
+}
+
+.about .about-content .about-text h3{
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--text-black-900);
+}
+
+.about .about-content .about-text h3 span {
+    color: crimson;
+}
+
+.about .about-content .about-text p {
+    font-weight: 450;
+    font-size: 16px;
+    line-height: 25px;
+    color: var(--text-black-700);
+}
+
+.about .about-content .personal-info {
+    flex: 0 0 60%;
+    max-width: 60%;
+    margin-bottom: 50px;
+}
+
+.about .about-content .skills {
+    flex: 0 0 40%;
+    max-width: 40%;
+    margin-bottom: 50px;
+}
+
+.info-items {
+    width: 500px;
+    margin: 50px auto 0;
+    display: table;
+    box-sizing: border-box;
+    background-color: var(--text-black-900);
+    color: #f2f2fc;
+    padding: 20px 50px;
+    margin-top: -10px;
+    
+}
+
+ .row {
+    margin: 70px 0;
+ }
+
+.top-left {
+    display: table-cell;
+    width: 50%;
+    vertical-align: middle;
+    
+}
+.top-right {
+    display: table-cell;
+    width: 50%;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: center;
+}
+
+.left {
+    width: 50%;
+    display: table-cell;
+    text-align: center;
+    vertical-align: baseline;
+}
+
+.right {
+    width: 50%;
+    text-align: center;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: center;
 }
